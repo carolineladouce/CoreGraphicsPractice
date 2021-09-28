@@ -7,6 +7,17 @@
 
 
 // Edit Constraints and colors
+// Adjust the counter outline to start at ex. 0.25
+// Then, have first + increase by ex. 0.75
+// After that, the + increases by 1
+// Set a max-out for increasing on the counter label
+// Set a min-out for decreasing on the counter label and the outline
+
+// "Polishing":
+// Buttons change color at touch down?
+// Add spring to counter increment?
+// Add quick color change to counter label text according to increase or decrease
+
 
 
 import UIKit
