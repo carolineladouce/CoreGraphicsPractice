@@ -8,6 +8,7 @@
 
 // Edit Constraints and colors
 
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
         
         // Add constraints
         counterView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        counterView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        counterView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
         counterView.widthAnchor.constraint(equalToConstant: 250).isActive = true
         counterView.heightAnchor.constraint(equalToConstant: 250).isActive = true
         
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
         
         // Add constraints
         sampleButton1.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        sampleButton1.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        sampleButton1.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 75).isActive = true
         sampleButton1.widthAnchor.constraint(equalToConstant: 100).isActive = true
         sampleButton1.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
