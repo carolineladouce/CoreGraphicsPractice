@@ -82,7 +82,6 @@ class ViewController: UIViewController {
     } // End viewDidLoad
     
     
-    ///
     // TOUCH HANDLERS
     @objc func plusButtonPressed() {
         counterView.counter += 1
