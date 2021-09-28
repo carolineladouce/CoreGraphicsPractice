@@ -20,7 +20,7 @@ class CounterView: UIView {
         }
     }
     
-    var counter: Int = 1 {
+    var counter: Int = 0 {
         didSet {
             if counter <= Constants.numberOfGlasses {
                 setNeedsDisplay()

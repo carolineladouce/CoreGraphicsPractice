@@ -100,12 +100,22 @@ class ViewController: UIViewController {
     // TOUCH HANDLERS
     @objc func plusButtonPressed() {
         counterView.counter += 1
+        
+        if counterView.counter >= 8 {
+            counterView.counter = 8
+        }
+        
         counterLabel.text = String(counterView.counter)
     }
     
     
     @objc func minusButtonPressed() {
         counterView.counter -= 1
+        
+        if counterView.counter <= 0 {
+            counterView.counter = 0
+        }
+        
         counterLabel.text = String(counterView.counter)
     }
     
