@@ -97,9 +97,36 @@ class ViewController: UIViewController {
     } // End viewDidLoad
     
     
+    
+    func resetHandler() {
+        counterView.counter = 0
+        counterLabel.text = String(counterView.counter)
+    }
+    
+    
+    func eightGlassesComplete() {
+        let yayPopUp = UIAlertController(title: "YAY", message: "8 Glasses complete", preferredStyle: .alert)
+        
+        // Add dismiss option
+        yayPopUp.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        present(yayPopUp, animated: true)
+        
+        // Add reset counter option
+        yayPopUp.addAction(UIAlertAction(title: "Reset", style: .destructive, handler: { action in
+            self.resetHandler()
+        }))
+    }
+    
+    
+    
+    
     // TOUCH HANDLERS
     @objc func plusButtonPressed() {
         counterView.counter += 1
+        
+        if counterView.counter == 8 {
+            eightGlassesComplete()
+        }
         
         if counterView.counter >= 8 {
             counterView.counter = 8
@@ -118,6 +145,8 @@ class ViewController: UIViewController {
         
         counterLabel.text = String(counterView.counter)
     }
+    
+    
     
     
 }
