@@ -16,6 +16,7 @@
 		C6228DB426FD64410001B2B2 /* Core_Graphics_Practice1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6228DB326FD64410001B2B2 /* Core_Graphics_Practice1UITests.swift */; };
 		C6228DC226FD65DF0001B2B2 /* SamplePushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6228DC126FD65DF0001B2B2 /* SamplePushButton.swift */; };
 		C63144FA26FE54F400F2B83A /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63144F926FE54F400F2B83A /* CounterView.swift */; };
+		C697023B2704B9E800577617 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697023A2704B9E800577617 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C6228DB526FD64410001B2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6228DC126FD65DF0001B2B2 /* SamplePushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePushButton.swift; sourceTree = "<group>"; };
 		C63144F926FE54F400F2B83A /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		C697023A2704B9E800577617 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				C6228D9126FD643F0001B2B2 /* AppDelegate.swift */,
 				C6228D9326FD643F0001B2B2 /* SceneDelegate.swift */,
 				C6228D9526FD643F0001B2B2 /* ViewController.swift */,
+				C697023A2704B9E800577617 /* BackgroundView.swift */,
 				C63144F926FE54F400F2B83A /* CounterView.swift */,
 				C6228DC126FD65DF0001B2B2 /* SamplePushButton.swift */,
 				C6228D9A26FD64400001B2B2 /* Assets.xcassets */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C697023B2704B9E800577617 /* BackgroundView.swift in Sources */,
 				C6228D9626FD643F0001B2B2 /* ViewController.swift in Sources */,
 				C6228D9226FD643F0001B2B2 /* AppDelegate.swift in Sources */,
 				C6228D9426FD643F0001B2B2 /* SceneDelegate.swift in Sources */,

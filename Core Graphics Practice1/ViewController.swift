@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     let counterLabel = UILabel()
     let sampleButton1 = SamplePushButton()
     var sampleButton2 = SamplePushButton()
+    let backgroundView = BackgroundView(frame: UIScreen.main.bounds)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,11 @@ class ViewController: UIViewController {
         let view = UIView()
         
         view.backgroundColor = UIColor.white
+        
+        backgroundView.contentMode = UIView.ContentMode.scaleAspectFill
+        
+        view.addSubview(backgroundView)
+       
         
         
         // Setup CounterView
@@ -118,10 +125,15 @@ class ViewController: UIViewController {
     }
     
     
+//    func counterSpringAnimation() {
+//        CounterView.animate(withDuration: 1, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [], animations: { [self] in
+//        }, completion: nil)
+//    }
     
     
     // TOUCH HANDLERS
     @objc func plusButtonPressed() {
+
         counterView.counter += 1
         
         if counterView.counter == 8 {

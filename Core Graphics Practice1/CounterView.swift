@@ -24,6 +24,9 @@ class CounterView: UIView {
         didSet {
             if counter <= Constants.numberOfGlasses {
                 setNeedsDisplay()
+//                counterSpringAnimation()
+                
+                
             }
         }
     }
@@ -31,6 +34,13 @@ class CounterView: UIView {
     
     var outlineColor: UIColor = UIColor.blue
     var counterColor: UIColor = UIColor.orange
+    
+    
+//    func counterSpringAnimation() {
+//        CounterView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [], animations: { [self] in
+//        }, completion: nil)
+//        setNeedsDisplay()
+//    }
     
     
     override func draw(_ rect: CGRect) {
