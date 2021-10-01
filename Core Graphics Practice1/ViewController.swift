@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     let sampleButton1 = SamplePushButton()
     var sampleButton2 = SamplePushButton()
     let backgroundView = BackgroundView(frame: UIScreen.main.bounds)
+    let medalView = MedalView()
+    
     
     
     override func viewDidLoad() {
@@ -99,6 +101,17 @@ class ViewController: UIViewController {
         sampleButton2.addTarget(self, action: #selector(minusButtonPressed), for: .touchUpInside)
         
         
+        view.addSubview(medalView)
+        medalView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Add constraints
+        medalView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        medalView.topAnchor.constraint(equalTo: sampleButton2.bottomAnchor, constant: 25).isActive = true
+        medalView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        medalView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        medalView.contentMode = .scaleAspectFit
+        
+//        medalView.showMedal(show: true)
         
         self.view = view
     } // End viewDidLoad
@@ -125,10 +138,10 @@ class ViewController: UIViewController {
     }
     
     
-//    func counterSpringAnimation() {
-//        CounterView.animate(withDuration: 1, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [], animations: { [self] in
-//        }, completion: nil)
-//    }
+    func showMedal() {
+        medalView.showMedal(show: true)
+    }
+    
     
     
     // TOUCH HANDLERS
@@ -138,6 +151,7 @@ class ViewController: UIViewController {
         
         if counterView.counter == 8 {
             eightGlassesComplete()
+            showMedal()
         }
         
         if counterView.counter >= 8 {
@@ -145,6 +159,7 @@ class ViewController: UIViewController {
         }
         
         counterLabel.text = String(counterView.counter)
+        
     }
     
     
