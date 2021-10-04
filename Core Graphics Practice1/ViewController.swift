@@ -153,6 +153,16 @@ class ViewController: UIViewController {
     }
     
     
+    func rotateButton(_ button: UIButton) {
+        let layer = button.layer
+        let rotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation")
+        rotationAnimation.keyTimes = [0, 1]
+        rotationAnimation.values = [0, CGFloat.pi]
+        rotationAnimation.duration = 0.25
+        layer.add(rotationAnimation, forKey: "transform.rotation")
+    }
+    
+    
     // TOUCH HANDLERS
     @objc func plusButtonPressed() {
         
@@ -167,6 +177,7 @@ class ViewController: UIViewController {
             counterView.counter = 8
         }
         
+        rotateButton(sampleButton1)
         counterLabel.text = String(counterView.counter)
         
     }
@@ -179,6 +190,7 @@ class ViewController: UIViewController {
             counterView.counter = 0
         }
         
+        rotateButton(sampleButton2)
         counterLabel.text = String(counterView.counter)
     }
     
