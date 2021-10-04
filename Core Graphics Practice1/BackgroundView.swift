@@ -9,9 +9,9 @@ import UIKit
 
 class BackgroundView: UIView {
     
-    var lightColor: UIColor = .purple
-    var darkColor: UIColor = .systemPurple
-    var patternSize: CGFloat = 200
+    var lightColor: UIColor = .systemGray
+    var darkColor: UIColor = .lightGray
+    var patternSize: CGFloat = 50
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else {

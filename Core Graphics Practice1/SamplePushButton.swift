@@ -9,7 +9,6 @@ import UIKit
 
 class SamplePushButton: UIButton {
     
-    //    var fillColor: UIColor = .green
     var isAddButton: Bool = false
     
     var fillColor: UIColor = .purple
@@ -61,9 +60,7 @@ class SamplePushButton: UIButton {
             ))
         }
         
-        
         fillColor.setFill()
-        
         
         // Set color of lines and then draw them
         UIColor.white.setStroke()
@@ -85,9 +82,6 @@ class SamplePushButton: UIButton {
     private var halfHeight: CGFloat {
         return bounds.height/2
     }
-    
-    
-    
     
     
     

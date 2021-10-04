@@ -31,7 +31,9 @@ class CounterView: UIView {
     var outlineColor: UIColor = UIColor.blue
     var counterColor: UIColor = UIColor.orange
     
+    
     override func draw(_ rect: CGRect) {
+        
         
         let center = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
         let radius = max(bounds.width, bounds.height)

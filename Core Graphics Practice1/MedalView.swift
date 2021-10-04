@@ -14,14 +14,13 @@ class MedalView: UIImageView {
     func showMedal(show: Bool) {
         image = (show == true) ? medalImage : nil
     }
-    
-    
+ 
     
     func createMedalImage() -> UIImage {
         debugPrint("creating Medal Image")
         
         
-        let size = CGSize(width: 200, height: 200)
+        let size = CGSize(width: 108, height: 200)
         
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         guard let context = UIGraphicsGetCurrentContext() else {

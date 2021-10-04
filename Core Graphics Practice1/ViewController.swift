@@ -44,7 +44,8 @@ class ViewController: UIViewController {
         backgroundView.contentMode = UIView.ContentMode.scaleAspectFill
         
         view.addSubview(backgroundView)
-       
+        backgroundView.alpha = 0.5
+        
         
         
         // Setup CounterView
@@ -66,8 +67,9 @@ class ViewController: UIViewController {
         counterLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         counterLabel.centerYAnchor.constraint(equalTo: counterView.centerYAnchor).isActive = true
         
-        counterLabel.textColor = UIColor.black
+        counterLabel.textColor = UIColor.blue
         counterLabel.text = "\(counterView.counter)"
+        counterLabel.font = counterLabel.font.withSize(40)
         counterLabel.textAlignment = .center
         
         
@@ -102,16 +104,15 @@ class ViewController: UIViewController {
         
         
         view.addSubview(medalView)
+        
         medalView.translatesAutoresizingMaskIntoConstraints = false
         
         // Add constraints
-        medalView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        medalView.topAnchor.constraint(equalTo: sampleButton2.bottomAnchor, constant: 25).isActive = true
+        medalView.centerXAnchor.constraint(equalTo: counterView.centerXAnchor).isActive = true
+        medalView.topAnchor.constraint(equalTo: counterLabel.bottomAnchor, constant: 25).isActive = true
         medalView.widthAnchor.constraint(equalToConstant: 100).isActive = true
         medalView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         medalView.contentMode = .scaleAspectFit
-        
-//        medalView.showMedal(show: true)
         
         self.view = view
     } // End viewDidLoad
@@ -121,6 +122,7 @@ class ViewController: UIViewController {
     func resetHandler() {
         counterView.counter = 0
         counterLabel.text = String(counterView.counter)
+        medalDisappear()
     }
     
     
@@ -135,6 +137,9 @@ class ViewController: UIViewController {
         yayPopUp.addAction(UIAlertAction(title: "Reset", style: .destructive, handler: { action in
             self.resetHandler()
         }))
+        
+        
+        showMedal()
     }
     
     
@@ -143,10 +148,14 @@ class ViewController: UIViewController {
     }
     
     
+    func medalDisappear() {
+        medalView.showMedal(show: false)
+    }
+    
     
     // TOUCH HANDLERS
     @objc func plusButtonPressed() {
-
+        
         counterView.counter += 1
         
         if counterView.counter == 8 {
